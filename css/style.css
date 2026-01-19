@@ -1,3 +1,5 @@
+/* ===== Global styles ===== */
+
 body {
   margin: 0;
   font-family: "Georgia", "Times New Roman", serif;
@@ -6,10 +8,34 @@ body {
   line-height: 1.65;
 }
 
+/* ===== Header layout ===== */
+
 header {
-  padding: 40px;
   border-bottom: 1px solid #ddd;
 }
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  gap: 30px;
+}
+
+.header-text {
+  max-width: 75%;
+}
+
+.header-photo img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px; /* subtle, academic */
+}
+
+/* ===== Typography ===== */
 
 h1 {
   margin-bottom: 5px;
@@ -20,6 +46,14 @@ h1 {
   color: #444;
   margin-top: 0;
 }
+
+h2 {
+  font-weight: normal;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* ===== Navigation ===== */
 
 nav {
   margin-top: 15px;
@@ -35,6 +69,8 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* ===== Main content ===== */
+
 main {
   max-width: 900px;
   margin: auto;
@@ -44,11 +80,7 @@ section {
   padding: 40px;
 }
 
-h2 {
-  font-weight: normal;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5px;
-}
+/* ===== Projects ===== */
 
 .project {
   margin-bottom: 35px;
@@ -71,9 +103,13 @@ h2 {
   text-decoration: underline;
 }
 
+/* ===== Lists ===== */
+
 ul {
   padding-left: 20px;
 }
+
+/* ===== Gallery (if you use it later) ===== */
 
 .gallery {
   display: grid;
@@ -86,9 +122,34 @@ ul {
   border: 1px solid #ccc;
 }
 
+/* ===== Footer ===== */
+
 footer {
   padding: 30px;
   border-top: 1px solid #ddd;
   text-align: center;
   font-size: 0.9em;
+}
+
+/* ===== Responsive tweaks ===== */
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-text {
+    max-width: 100%;
+  }
+
+  .header-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 6px 10px;
+  }
 }
